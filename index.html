@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Font Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="app/scss/style.css">
+  <script defer src="./app/js/script.js" ></script>
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+
+<main class="container">
+  <div class="title">SPLITTER</div>
+  <div class="card">
+    <!-- Form -->
+    <form id="form" class="card__form">
+      <div>
+        <div class="input_labels">
+          <label for="bill"> Bill </label>
+          <span aria-live="polite" id="bill-error" class="hide-error">Must be positive</span>
+        </div>
+
+        <div class="input_field">
+          <input type="number" id="bill" name="bill" placeholder="0" min="0" class="text_field"/>
+          <img src="images/icon-dollar.svg" alt="Dollar Icon">
+        </div>
+      </div>
+
+      <div>
+        <p> Select Tip % </p>
+        <div id="button_select" class="button_select">
+        <label id="option_5" class="selected">
+          <input type="radio" name="percentage" value="5" checked/>5%</label>
+        <label id="option_10">
+          <input type="radio"  name="percentage" value="10"/>10%</label>
+        <label id="option_15">
+          <input type="radio" name="percentage" value="15"/>15%</label>
+        <label id="option_25">
+          <input type="radio" name="percentage" value="25"/>25%</label>
+        <label id="option_50">
+          <input type="radio"  name="percentage" value="50"/>
+          50%</label>
+          <input type="number" id="option_custom" name="custom_percentage" placeholder="Custom" pattern="^[1-9]\d*$" class="custom_option"/>
+        </div>
+      </div>
+
+      <div>
+        <div class="input_labels">
+          <label for="num_people"> Number of People </label>
+          <span aria-live="polite" id="num-people-error" class="hide-error">Must be positive whole number</span>
+        </div>
+        <div class="input_field">
+          <input type="number" id="num_people" name="num_people" placeholder="0" min="1" class="text_field"/>
+          <img src="images/icon-person.svg" alt="Person Icon">
+        </div>
+      </div>
+    </form>
+
+    <!-- Results -->
+    <div class="card__results">
+      <div>
+        <!-- Tip Amount -->
+        <div class="result">
+          <div class="result__text">
+            <h2>Tip Amount</h2>
+            <p> / person</p>
+          </div>
+          <div class="result__value">
+            <h1 id="tip">$0.00</h1>
+          </div>
+        </div>
+        <!-- Total -->
+        <div class="result">
+          <div class="result__text">
+            <h2>Tip Amount</h2>
+            <p> / person</p>
+          </div>
+          <div class="result__value">
+            <h1 id="total">$0.00</h1>
+          </div>
+        </div>
+      </div>
+      <button id="resetBtn" disabled>RESET</button>
+
+    </div>
+  </div>
+</main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/sonmikrafft">Sonja Krafft</a>.
+    </p>
+  </footer>
+</body>
+</html>

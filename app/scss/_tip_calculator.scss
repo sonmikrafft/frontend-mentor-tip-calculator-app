@@ -1,0 +1,183 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $light-grayish-cyan;
+}
+
+.title {
+  width: 5rem;
+  letter-spacing: 0.5rem;
+  word-break: break-all;
+}
+
+/*
+White Card
+*/
+.card {
+  display: grid;
+  max-width: 57.5rem;
+  background-color: $white;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__results {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    background-color: $very-dark-cyan;
+    color: $white;
+  }
+}
+
+/*
+Tip Selection
+*/
+.button_select {
+  display: grid;
+  gap: 1rem;
+
+  .custom_option {
+    width: 100%;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    border: none;
+    border-radius: 0.5rem;
+    outline-color: transparent;
+    background-color: $very-light-grayish-cyan;
+    color: $very-dark-cyan;
+    font: inherit;
+    font-size: $font-h1-s;
+    text-align: center;
+  }
+
+  .selected {
+    background-color: $strong-cyan;
+  }
+
+  label {
+    cursor: pointer;
+    -webkit-appearance: button;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+    background-color: $very-dark-cyan;
+    color: $white;
+    font-size: $font-h1-s;
+    text-align: center;
+
+  }
+
+  label.selected {
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
+  }
+
+
+  input[type="radio"] {
+    display: none;
+  }
+}
+
+/*
+Form Labels
+*/
+.input_labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*
+Form Text Input Fields
+*/
+.input_field {
+  position: relative;
+
+  img {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+  }
+}
+
+.text_field {
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline-color: transparent;
+  background-color: $very-light-grayish-cyan;
+  font: inherit;
+  font-size: $font-h1-s;
+  text-align: right;
+}
+
+// For Webkit browsers
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none; // remove up and down arrows for number fields
+  margin: 0;
+}
+
+// For Firefox
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*
+Dark Card with Results
+*/
+.result {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+
+  &__text {
+    p {
+      font-size: $font-s;
+      opacity: 70%;
+    }
+  }
+
+  &__value {
+    color: $strong-cyan;
+  }
+}
+
+/*
+Errors
+*/
+.error-field {
+  outline: 1px solid orangered;
+}
+.hide-error {
+  display: none;
+}
+.error-message {
+  display: block;
+  color: orangered;
+  font-size: $font-s;
+  text-align: right;
+  margin: 0;
+}
+
+/*
+Button
+*/
+button {
+  border-style: none;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: $strong-cyan;
+  font: inherit;
+}
+
+

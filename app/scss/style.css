@@ -1,0 +1,257 @@
+@media (max-width: 87.4375em) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .title {
+    margin: 2.5rem 0;
+  }
+  .card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+  }
+  .card__form {
+    padding: 0 0.5rem 2rem 0.5rem;
+  }
+  .card__results {
+    padding: 1.5rem;
+  }
+  .button_select {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 87.5em) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .container {
+    height: 100vh;
+  }
+  .title {
+    margin: 5.5rem 0;
+  }
+  .card {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+  }
+  .card__form {
+    padding: 1rem;
+  }
+  .card__results {
+    padding: 2.5rem;
+  }
+  .button_select {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1rem;
+  font-family: "Space Mono", sans-serif;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  line-height: 1.5;
+}
+body h1 {
+  margin: 0;
+}
+body h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+body p {
+  margin: 0;
+}
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+  color: black;
+}
+body .attribution a {
+  color: hsl(172, 67%, 45%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.title {
+  width: 5rem;
+  letter-spacing: 0.5rem;
+  word-break: break-all;
+}
+
+/*
+White Card
+*/
+.card {
+  display: grid;
+  max-width: 57.5rem;
+  background-color: hsl(0, 0%, 100%);
+}
+.card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.card__results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 1rem;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+}
+
+/*
+Tip Selection
+*/
+.button_select {
+  display: grid;
+  gap: 1rem;
+}
+.button_select .custom_option {
+  width: 100%;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  border: none;
+  border-radius: 0.5rem;
+  outline-color: transparent;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  font: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.button_select .selected {
+  background-color: hsl(172, 67%, 45%);
+}
+.button_select label {
+  cursor: pointer;
+  -webkit-appearance: button;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+  text-align: center;
+}
+.button_select label.selected {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.button_select input[type=radio] {
+  display: none;
+}
+
+/*
+Form Labels
+*/
+.input_labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*
+Form Text Input Fields
+*/
+.input_field {
+  position: relative;
+}
+.input_field img {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+.text_field {
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline-color: transparent;
+  background-color: hsl(189, 41%, 97%);
+  font: inherit;
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*
+Dark Card with Results
+*/
+.result {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.result__text p {
+  font-size: 0.75rem;
+  opacity: 70%;
+}
+.result__value {
+  color: hsl(172, 67%, 45%);
+}
+
+/*
+Errors
+*/
+.error-field {
+  outline: 1px solid orangered;
+}
+
+.hide-error {
+  display: none;
+}
+
+.error-message {
+  display: block;
+  color: orangered;
+  font-size: 0.75rem;
+  text-align: right;
+  margin: 0;
+}
+
+/*
+Button
+*/
+button {
+  border-style: none;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: hsl(172, 67%, 45%);
+  font: inherit;
+}
+
+/*# sourceMappingURL=style.css.map */
